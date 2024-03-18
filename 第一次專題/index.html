@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="zh-hants">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A description of the page" />
+    <meta name="robots" content="index,follow" />
+    <meta name="googlebot" content="index,follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>台灣旅遊網</title>
+
+    <!-- 這個是字體的 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- 下面這個link是icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- scss -->
+    <link rel="stylesheet" href="../style/all.css" />
+    <!-- 下面這個link是bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <img class="fixed-image" src="./taiwanpic/bgp101.jpeg" alt="" />
+
+    <header>
+      <section class="header-loge">
+        <img
+          src="./images/網站Logo 2.svg"
+          alt="日本旅遊logo"
+        />
+        <h1><a href="./index.html">2024旅行社</a></h1>
+      </section>
+
+      <section class="header-nav">
+        <ul class="header_nav_high">
+          <li>
+            <a class="icon1" href="./register.html"><i class="fa-solid fa-users"></i>會員登入</a>
+          </li>
+          <li>
+            <a href=""><i class="fa-brands fa-shopify"></i>會員專區</a>
+          </li>
+          <li>
+            <a href=""><i class="fa-solid fa-location-dot"></i>服務據點</a>
+          </li>
+          <li>
+            <a href=""><i class="fa-solid fa-comments"></i>聯絡我們</a>
+          </li>
+          <li>
+            <input type="search" placeholder="search">
+            <label for="search"><i class="fa-solid fa-magnifying-glass"></i></a>搜尋更多</label>
+          </li>
+        </ul>
+
+        <ul class="header_nav_low">
+
+          <li>
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+               台灣團體
+             </button>
+             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+               <li><a class="dropdown-item" href="#">北基宜</a></li>
+               <li><a class="dropdown-item" href="#">桃竹苗</a></li>
+               <li><a class="dropdown-item" href="#">中彰投</a></li>
+               <li><a class="dropdown-item" href="#">雲嘉南</a></li>
+               <li><a class="dropdown-item" href="#">高屏</a></li>
+               <li><a class="dropdown-item" href="#">花東</a></li>
+               <li><a class="dropdown-item" href="#">小琉球</a></li>
+             </ul>
+         </li>
+          
+         <li>
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+             購票/票卷
+           </button>
+           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+             <li><a class="dropdown-item" href="#">國旅聯票</a></li>
+             <li><a class="dropdown-item" href="#">豪華遊艇</a></li>
+             <li><a class="dropdown-item" href="#">台灣票卷當地遊</a></li>
+           </ul>
+       </li>
+
+       <li>
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+           主題旅遊
+         </button>
+         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+           <li><a class="dropdown-item" href="#">火車之旅</a></li>
+           <li><a class="dropdown-item" href="#">公車之旅</a></li>
+           <li><a class="dropdown-item" href="#">高鐵之旅</a></li>
+           <li><a class="dropdown-item" href="#">自駕之旅</a></li>
+         </ul>
+     </li>
+
+          <li>
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+               交通方式
+             </button>
+             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+               <li><a class="dropdown-item" href="#">火車之旅</a></li>
+               <li><a class="dropdown-item" href="#">公車之旅</a></li>
+               <li><a class="dropdown-item" href="#">高鐵之旅</a></li>
+               <li><a class="dropdown-item" href="#">自駕之旅</a></li>
+             </ul>
+         </li>
+
+        </ul>
+      </section>
+    </header>
+
+    <main>
+      <div class="background_img">
+        <div class="filter"></div>
+        <h2>休閒空間，特殊假期。<br />安排一趟國內旅遊行程，放鬆身心。</h2>
+      </div>
+
+      <div class="mid_text">
+        <h2>各地風景，多元美食</h2>
+      </div>
+
+      <div class="mid_img">
+        <!-- <div class="circle_img">
+          <img src="./taiwanpic/hotpot.jpeg" alt="" />
+          <h3>麥克</h3>
+        </div>
+        <div class="circle_img">
+          <img src="./taiwanpic/bobatea.jpeg" alt="" />
+          <h3>麥克</h3>
+        </div>
+        <div class="circle_img">
+          <img src="./taiwanpic/chicken.jpeg" alt="" />
+          <h3>麥克</h3>
+        </div>
+        <div class="circle_img">
+          <img src="./taiwanpic/xialongbao_1.jpeg" alt="" />
+          <h3>麥克</h3> -->
+       <!-- 下面跑馬燈不是我打的，我也不知道我在調整什麼 -->
+          <div class="box">
+            <div class="list">
+                <div class="photo">
+                  <img src="./images/swiper_hotpot.jpeg" width="170px" height="170px" alt="">
+                </div>
+                <div class="photo">
+                  <img src="./images/grid_img/g_5.jpeg" width="170px" height="170px" alt="">
+                </div>
+                <div class="photo">
+                  <img src="./images/grid_img/grid_1.jpeg" width="150px" height="150px" alt="">
+                </div>
+                <div class="photo">
+                  <img src="./images/swiper_pizza.jpeg" width="150px" height="150px" alt="">
+                </div>
+                <div class="photo">
+                  <img src="./images/swiper_nightmarket.jpeg" width="150px" height="150px" alt="">
+                </div>
+                <div class="photo">
+                  <img src="./images/swiper_spaghetti.jpeg" width="150px" height="150px" alt="">
+                </div>
+                <div class="photo">
+                  <img src="./images/grid_img/g_2.jpeg" width="170px" height="170px" alt="">
+                </div>
+                <div class="photo">
+                  <img src="./images/swiper_babo.jpeg" width="170px" height="170px" alt="">
+                </div>
+                <div class="photo">
+                  <img src="./images/swiper_shushi.jpeg" width="150px" height="150px" alt="">
+                </div>
+                <div class="photo">
+                  <img src="./images/grid_img/g_3.jpeg" width="150px" height="150px" alt="">
+                </div>
+                <div class="photo">
+                  <img src="./images/swiper_steak.jpeg" width="150px" height="150px" alt="">
+                </div>
+                <div class="photo">
+                  <img src="./images/swiper_nightmarket.jpeg" width="150px" height="150px" alt="">
+                </div>
+                <div class="photo">
+                  <img src="./images/swiper_spaghetti.jpeg" width="150px" height="150px" alt="">
+                </div>
+                <div class="photo">
+                  <img src="./images/grid_img/grid_4.jpeg" width="170px" height="170px" alt="">
+                </div>
+                <div class="photo">
+                  <img src="./images/swiper_101.jpeg" width="170px" height="170px" alt="">
+                </div>
+                <div class="photo">
+                  <img src="./images/swiper_shushi.jpeg" width="150px" height="150px" alt="">
+                </div>
+                <div class="photo">
+                  <img src="./images/grid_img/g_4.jpeg" width="150px" height="150px" alt="">
+                </div>
+                <div class="photo">
+                  <img src="./images/swiper_steak.jpeg" width="150px" height="150px" alt="">
+                </div>
+                <div class="photo">
+                  <img src="./images/grid_img/grid_2.jpeg" width="150px" height="150px" alt="">
+                </div>
+                <!-- <div class="photo">2</div>
+                <div class="photo">3</div>
+                <div class="photo">4</div>
+                <div class="photo">5</div>
+                <div class="photo">6</div>
+                <div class="photo">1</div>
+                <div class="photo">2</div>
+                <div class="photo">3</div>
+                <div class="photo">4</div>
+                <div class="photo">5</div>
+                <div class="photo">6</div> -->
+            </div>
+        </div>
+        </div>
+
+
+      <div class="big_img">
+        <div class="big_img_left">
+          <div class="big_img_form">
+            <form action="">
+              <h3>填寫表單立即出發</h3>
+              <div class="form1">
+                <label for="departureplace">出發地</label>
+                <input list="categories" id="departureplace" placeholder="不拘">
+                <datalist id="categories">
+                  <option value="台北">
+                    <option value="桃園">
+                    <option value="台中">
+                    <option value="台南">
+                    <option value="高雄">
+                    <option value="台東">
+                    <option value="花蓮">
+                </datalist>
+                <!-- <h1 style="font-size: 2em;"> &rarr;</h1> -->
+                <label for="departureplace">目的地</label>
+                <input list="categories" id="departureplace" placeholder="不拘">
+                <datalist id="categories">
+                  <option value="台北">
+                    <option value="桃園">
+                    <option value="台中">
+                    <option value="台南">
+                    <option value="高雄">
+                    <option value="台東">
+                    <option value="花蓮">
+                </datalist>
+              </div>
+              <div class="form2">
+                <label for="departure">出發日期</label>
+                <input type="date" id="departure">
+              </div>
+              <div class="form3">
+                <label for="return">返回日期</label>
+                <input type="date" id="return">
+              </div>
+              <div class="form4">
+                <label for="play">出遊天數限定</label>
+                <input type="radio" id="one" name="play">
+                <label for="one">一日遊</label>
+                <input type="radio" id="two" name="play">
+                <label for="two">二日遊</label>
+                <input type="radio" id="there" name="play">
+                <label for="there">三日以上</label>
+              </div>
+              <div class="form5">
+                <label for="need">特殊需求</label>
+                
+                <textarea name="need" id="need" cols="30" rows="2"></textarea>
+              </div>
+              
+              <div class="form6">
+                <input type="submit" value="送出表單">
+              </div>
+              <hr>
+              <div class="form7">
+                <p class="p1">熱門地點：</p>
+               <p class="p2"> 立山黑部開山、 清明最後晚鳥、 屏東金針花季、 春遊賞櫻趣、墾丁音樂祭</p>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="big_img_content">
+              <div class="grid-item img-01">
+                <p>台東四日遊-限時特價</p>
+              </div>
+              <div class="grid-item img-02">
+                <p>台北兩日遊-限時特價</p>
+              </div>
+              <div class="grid-item img-03">
+                <p>台中三日遊-限時特價</p>
+              </div>
+              <div class="grid-item img-04">
+                <p>花蓮四日遊-限時特價</p>
+              </div>
+          </div>
+          
+    </main>
+    <footer>
+      <section class="footer_contact">
+        <img
+          class="footer_contact_img"
+          src="./images/undraw_traveling_yhxq.svg"
+          alt=""
+        />
+        <div class="footer_left">
+          <h2>2024旅行社</h2>
+          <h4>
+            台灣台北市114內湖區石潭路150號<br />
+            代表人：麥克李<br />
+            統一編號：04655090<br />
+            代表號：02-8793-9001 <br />
+            綜合旅行社 交觀綜字 2015號 <br />
+            品保協會會員93字第北0540號 <br />
+          </h4>
+        </div>
+        <div class="footer_mid">
+          <h2>關於公司</h2>
+          <h4>
+            <a href="#">公司簡介</a><br />
+            <a href="#">菁英招募</a><br />
+            <a href="#">厲害關係人專區</a><br />
+            <a href="#">全省服務據點</a><br />
+            <a href="#">聯絡我們</a><br />
+          </h4>
+        </div>
+        <div class="footer_right">
+          <h2>旅客服務</h2>
+          <h4>
+            <a href="#">護照簽證</a><br />
+            <a href="#">WiFI租借</a><br />
+            <a href="#">翻譯機/耳機</a><br />
+            <a href="#">會員優惠</a><br />
+            <a href="#">相關問題</a><br />
+          </h4>
+        </div>
+        <div class="footer_right">
+          <h2>關係企業</h2>
+          <h4>
+            <a href="#">Apple Computer, Inc.</a><br />
+            <a href="#">Tesla Motors, Inc.</a><br />
+            <a href="#">Super Micro Computer, Inc.</a><br />
+            <a href="#">ASML Holding N.V.</a><br />
+            <a href="#">Nvidia Corporation</a><br />
+          </h4>
+        </div>
+      </section>
+      <section class="footer_icon">
+        <div class="icon">
+          <a href="#"><img src="./images/Icons/facebook.svg" alt="" /></a>
+        </div>
+        <div class="icon">
+          <a href="#"><img src="./images/Icons/instagram.svg" alt="" /></a>
+        </div>
+        <div class="icon">
+          <a href="#"><img src="./images/Icons/twitter.svg" alt="" /></a>
+        </div>
+        <div class="icon">
+          <a href="#"><img src="./images/Icons/youtube.svg" alt="" /></a>
+        </div>
+      </section>
+      <p>copyright &copy;2024.在資策會練習用</p>
+    </footer>
+    <!-- <script>
+      //這邊我不是自己打的、第一頁上面的輪播
+      setInterval(() => {
+        let topBackground = document.querySelector("div.background_img");
+        if (
+          topBackground.style.backgroundImage ==
+          'url("./images/swiper_101.jpeg")'
+        ) {
+          topBackground.style.backgroundImage =
+            'url("./images/swiper_freefild.jpeg")';
+        } else if (
+          topBackground.style.backgroundImage ==
+          'url("./images/swiper_freefild.jpeg")'
+        ) {
+          topBackground.style.backgroundImage =
+            'url("./images/swiper_temple.jpeg")';
+        } else if (
+          topBackground.style.backgroundImage ==
+          'url("./images/swiper_temple.jpeg")'
+        ) {
+          topBackground.style.backgroundImage =
+            'url("./images/swiper_mountain.jpeg")';
+        } else {
+          topBackground.style.backgroundImage =
+            'url("./images/swiper_101.jpeg")';
+        }
+      }, 2500);
+    </script> -->
+    <!-- 下面是bootstrap的預設 -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+<!-- 下面是跑馬燈 -->
+<!-- <script>
+ function load(){
+            
+            var list = document.querySelector('.list')
+            var box = document.querySelector('.box');
+            let left = list.style.left;
+            let timer;
+            function move(){
+                clearInterval(timer);
+                timer=setInterval((env) => {
+                    left = left - 2;
+                    console.log(list.clientLeft);
+                    if(left ==- (6 * 200 + 2 * 24)){ 
+                        left = 0;
+                    }
+                    list.style.left = left + 'px';
+                },20);
+            }
+            
+                 move();
+                box.onmouseover = function(){
+                      clearInterval(timer);
+                };
+
+                box.onmouseleave = function(){
+                     move();
+                };
+        };
+        document.addEventListener('DOMContentLoaded',load);
+   </script> -->
+  </body>
+</html>

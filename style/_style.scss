@@ -1,0 +1,404 @@
+$themeColor: rbga(152, 57, 255, 0.5);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+body {
+  position: relative; //
+
+  img.fixed-image {
+    min-height: 100vh;
+    width: 100%;
+    position: fixed; //為什麼這邊打了fixed之後，照片就會下沉下去
+    z-index: -5;
+  }
+  header {
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; //不懂為什麼是寫在這邊，不是寫在header-nav那邊
+
+    position: sticky; //這個是用來卡住上面的
+    top: 0; //不懂幹嘛設定0
+    z-index: 10;
+    box-shadow: 0 10px 6px -6px #777;
+
+    .header-loge {
+      flex-wrap: wrap;
+      display: flex;
+      // border: 3px solid lightseagreen;
+      flex: 1 1 100px;
+      align-items: center;
+      justify-content: space-around;
+
+      img {
+        width: 100px;
+        height: 100px;
+      }
+      h1 a {
+        color: black;
+        text-decoration: none;
+      }
+      h1 a:hover {
+        color: red;
+        transform: scale(1.2); //不知道為什麼又選不到了
+      }
+    }
+    .header-nav {
+      flex-wrap: wrap;
+      // border: 3px solid lightgreen;
+      flex: 2 1 500px;
+      // display: flex;不是在這裡寫flex 為什麼？
+      .header_nav_high {
+        display: flex;
+        text-decoration: none;
+        list-style-type: none;
+        justify-content: space-around;
+        margin: 10px;
+        margin-bottom: 25px;
+        a {
+          font-size: 18px;
+          text-decoration: none;
+          color: black;
+          transition: all 0.5s ease;
+          cursor: pointer;
+          &:hover {
+            color: red;
+            border-bottom: 2px solid;
+          }
+        }
+      }
+      .header_nav_low {
+        flex-wrap: wrap;
+        display: flex;
+        text-decoration: none;
+        list-style-type: none;
+        justify-content: space-evenly;
+        .dropdwon {
+          border: 2px solid red;
+          .dropbtn {
+            border: 2px solid lawngreen;
+          }
+          .dropbtn_content {
+            border: 2px solid rgb(63, 0, 252);
+          }
+        }
+      }
+    }
+  }
+  main {
+    min-height: 200vh;
+    div.background_img {
+      // border: 3px solid red;
+      min-height: 70vh; //這邊我不知道為什麼要這樣寫
+      background-image: url(../第一次專題/images/swiper_101.jpeg);
+      background-size: cover;
+      background-position: center;
+      position: relative; //不懂為什麼這樣寫h2就跑回去了
+
+      display: flex; //
+      justify-content: center;
+      align-items: center;
+      z-index: 0;
+
+      div.filter {
+        width: 100%;
+        min-height: 70vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        // border: 4px solid gold;
+        position: absolute; //不懂為什麼這樣寫h2就跑回去了
+        z-index: -1; //這邊真的不懂為什麼不在h2設定，然後其實我也可以在html把h2寫在filter的nesting啊
+      }
+      h2 {
+        color: aliceblue;
+        text-align: center;
+        font-size: 2.5rem;
+      }
+    }
+    div.mid_text {
+      background-color: whitesmoke;
+      // border: 5px solid goldenrod;
+      margin-top: 25px;
+      h2 {
+        margin: 0px;
+        color: black;
+        text-align: center;
+      }
+    }
+
+    div.mid_img {
+      background-color: rgba(255, 255, 255, 0.9);
+      display: flex;
+      // border: 3px solid lightgreen;
+      justify-content: space-around;
+      width: 100vw;
+      height: 120px;
+
+      .box {
+        position: relative;
+        width: 1000%;
+        height: 100px;
+        // border: 1px solid #000000;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .list {
+        left: 0px;
+        display: flex;
+        position: absolute;
+      }
+      .photo {
+        width: 200px;
+        height: 200px;
+        // border: 3px solid red;
+        margin-left: 1px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      // margin-top: 15px;
+      // div.circle_img {
+      //   // border: 3px solid lightcoral;
+
+      //   img {
+      //     width: 150px;
+      //     height: 150px;
+      //     border-radius: 50%;
+      //     transition: all 0.1s ease-in;
+      //     padding: 3px;
+      //     &:hover {
+      //       border: 2px solid red;
+      //     }
+      //   }
+      //   h3 {
+      //     text-align: center;
+      //     transition: all 0.5s ease;
+      //     &:hover {
+      //       color: aquamarine;
+      //     }
+      //   }
+      // }
+    }
+
+    div.big_img {
+      // border: 2px solid blue;
+      background-color: rgba(0, 0, 0, 0.5); //這邊是透明的意思
+      min-height: 70vh;
+      display: flex;
+      margin-top: 125px;
+
+      // align-items: center;
+      .big_img_left {
+        // border: 2px solid red;
+        flex: 0 0 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .big_img_form {
+          background-color: rgba(255, 255, 255, 0.5);
+          width: 80%; //這邊我不懂，我應該設定%應該要是在父層底下去
+          height: 75%;
+          border: 5px solid white;
+          border-radius: 10px;
+          box-shadow: 0 0 30px;
+          h3 {
+            text-align: center;
+          }
+          .form1 {
+            margin-bottom: 15px;
+            // display:flex;
+            // justify-content: center;
+            .form1 input {
+              margin-right: 20px;
+            }
+          }
+          .form2 {
+            margin-bottom: 5px;
+          }
+          .form3 {
+            margin-bottom: 15px;
+          }
+          .form4 {
+            margin-bottom: 5px;
+          }
+          .form5 {
+            margin-bottom: 13px;
+            display: flex;
+          }
+          .form6 {
+            display: flex;
+            justify-content: center;
+            input[type="submit"] {
+              color: black;
+              width: 50%;
+              border-radius: 5px;
+              &:hover {
+                color: red;
+                transform: scale(1.1);
+              }
+            }
+          }
+          .form7 {
+            display: flex;
+            justify-content: center;
+            // 不知道為什麼控制不到
+            // .form7 p1{
+            //   color: red;
+            //   font-size: 15px;
+            // }
+            // .form7 p2{
+            //   color: aliceblue;
+            //   font-size: 10px;
+            //   %:hover{
+            //     color: red;
+            //   }
+            // }
+          }
+        }
+      }
+      .big_img_content {
+        // border: 2px solid greenyellow;
+        flex: 0 0 40%;
+        margin-top: 60px;
+        
+
+        .grid-item {
+          display: inline-block;
+          // 可选：设置单元格的样式，如背景色、边框等
+          // border: 1px solid #ccc;
+          position: relative;
+          background: no-repeat;
+          background-size: cover;
+          height: 200px;
+          width: 48%;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+
+          background-repeat: no-repeat;
+          background-size: contain;
+          &.img-01 {
+            background-image: url("../第一次專題/images/grid_img/g_4.jpeg");
+          }
+          &.img-02 {
+            background-image: url("../第一次專題/images/grid_img/g_2.jpeg");
+          }
+          &.img-03 {
+            background-image: url("../第一次專題/images/grid_img/g_6.jpeg");
+          }
+          &.img-04 {
+            background-image: url("../第一次專題/images/grid_img/grid_3.jpeg");
+          }
+
+          p {
+            color: red;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            font-size: 16px;
+            bottom: 0;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+  footer {
+    width: 100vw;
+    height: 40vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    // border: 5px solid red;
+    .footer_contact {
+      position: relative;
+      left: 10px;
+      top: 40px;
+      .footer_contact_img {
+        // position: relative;
+        // left: 10px;
+        // top: 12px;
+        width: 30vh;
+        border-right: 1px solid #ddd;
+      }
+      // border: 3px solid greenyellow;
+      height: 25vh;
+      display: flex;
+      justify-content: space-around;
+      .footer_left {
+        color: aliceblue;
+        // border: 3px solid red;
+        height: 10vh;
+        //這邊好奇怪設定footer_left 卻沒有把下面的h2,h4包再一起
+        h4 {
+          font-size: 14px;
+          margin-right: 60px;
+        }
+      }
+      .footer_mid {
+        color: aliceblue;
+        // border: 3px solid blue;
+        height: 10vh;
+        h4 {
+          font-size: 14px;
+          margin-top: 5px;
+          a {
+            color: aliceblue;
+            text-decoration: none;
+            &:hover {
+              color: red;
+            }
+          }
+        }
+      }
+      .footer_right {
+        color: aliceblue;
+        // border: 3px solid palevioletred;
+        height: 10vh;
+        h4 {
+          margin-top: 5px;
+          font-size: 14px;
+          a {
+            color: aliceblue;
+            text-decoration: none;
+            &:hover {
+              color: red;
+            }
+          }
+        }
+      }
+    }
+    .footer_icon {
+      // background-color: aqua;
+      height: 10vh;
+      display: flex; //這邊可以注意一下，因為a不是block所以，我在html把icon都用div去包，然後這樣就可以在footer_icon這層去設定display了
+      justify-content: center;
+      .icon {
+        margin-top: 40px;
+        img {
+          margin: 0 18px;
+          width: 2.7vw;
+        }
+      }
+    }
+  }
+  p {
+    color: aliceblue;
+    font-size: 12px;
+  } //因為不知道如何在上面再插入，所以只好寫在最下面
+}
+
+// scrolerbar
