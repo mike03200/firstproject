@@ -220,23 +220,31 @@ body {
             text-align: center;
           }
           .form1 {
+            display: flex;
+            justify-content: center;
             margin-bottom: 15px;
             // display:flex;
             // justify-content: center;
-            .form1 input {
-              margin-right: 20px;
+            input {
+              border: 0;
+              padding-right: 20px;
+              margin-right: 50px;
             }
           }
           .form2 {
+            margin-left: 14.5px;
             margin-bottom: 5px;
           }
           .form3 {
+            margin-left: 14.5px;
             margin-bottom: 15px;
           }
           .form4 {
+            margin-left: 14.5px;
             margin-bottom: 5px;
           }
           .form5 {
+            margin-left: 14.5px;
             margin-bottom: 13px;
             display: flex;
           }
@@ -275,7 +283,6 @@ body {
         // border: 2px solid greenyellow;
         flex: 0 0 40%;
         margin-top: 60px;
-        
 
         .grid-item {
           display: inline-block;
@@ -286,7 +293,6 @@ body {
           background-size: cover;
           height: 200px;
           width: 48%;
-
           &:hover {
             transform: scale(1.1);
           }

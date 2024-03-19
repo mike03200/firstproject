@@ -1,0 +1,19 @@
+.service_container {
+  width: 100%;
+  .service_main {
+    border: 2px solid red;
+    width: 80%;
+    h2 {
+      color: red;
+    }
+    .service_place {
+      display: flex;
+    }
+    .service_office {
+      display: flex;
+    }
+    .service_content {
+      display: flex;
+    }
+  }
+}
