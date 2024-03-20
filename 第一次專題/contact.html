@@ -53,13 +53,13 @@
             <a class="icon1" href="./register.html"><i class="fa-solid fa-users"></i>會員登入</a>
           </li>
           <li>
-            <a href=""><i class="fa-brands fa-shopify"></i>會員專區</a>
+            <a href="./member.html"><i class="fa-brands fa-shopify"></i>會員專區</a>
           </li>
           <li>
-            <a href=""><i class="fa-solid fa-location-dot"></i>服務據點</a>
+            <a href="./service.html"><i class="fa-solid fa-location-dot"></i>服務據點</a>
           </li>
           <li>
-            <a href=""><i class="fa-solid fa-comments"></i>聯絡我們</a>
+            <a href="./contact.html"><i class="fa-solid fa-comments"></i>聯絡我們</a>
           </li>
           <li>
             <input type="search" placeholder="search">
@@ -125,19 +125,58 @@
 <div class="contact_main">
     <div class="login">
         <div class="form" >
-            <h2>會員登入</h2>
+            <h2>意見反饋</h2>
+
+            <div class="contact_form_content">
+              <div class="contact_form_content_left">
+                <div class="form_group">
+                  <label class="form_group_label" for="feedback">意見類別
+                    <sup>*</sup>
+                  </label>
+                  <select class="form_group_select" name="选择项" id="feedback">
+                    <option  value="#">旅遊諮商</option>
+                    <option  value="#">訂單聯絡</option>
+                    <option  value="#">網頁系統</option>
+                    <option  value="#">洽談合作</option>
+                    <option  value="#">感謝建議</option>
+                  </select>
+                </div>
+
+              <div class="form_group">
+                  <label class="form_group_label" for="name">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名
+                    <sup>*</sup>
+                  </label>
+                  <input type="text" id="name" placeholder="請輸入聯絡人姓名">
+              </div>
+
+              <div class="form_group">
+                <label class="form_group_label" for="phone">聯絡電話
+                  <sup>*</sup>
+                </label>
+                <input type="text" id="phone" placeholder="請輸入聯絡電話">
+            </div>
+
             <div class="form_group">
-                <label for="user_id">帳號</label>
-                <input type="text" id="user_id">
+              <label class="form_group_label" for="eamil">電子信箱
+                <sup>*</sup>
+              </label>
+              <input type="text" id="email" placeholder="請輸入電子信箱">
+          </div>
+          <div class="form_group">
+            <label class="form_group_label" for="order">訂單編號
+              <sup>*</sup>
+            </label>
+            <input type="text" id="order" placeholder="請輸入訂單編號">
+        </div>
+              </div>
+              
+              <div class="contact_form_content_right">
+                <label for="message"></label>
+        <textarea name="message" id="message" cols="30" rows="10" placeholder="請留下您的寶貴意見與建議（字數最多500字）"></textarea>
+      
+              </div>
             </div>
-            <div class="form_group">
-                <label for="password">密碼</label>
-                <input type="text" id="password">
-            </div>
-            <div class="btn_group">
-                <button class="btn">登入</button>
-                <button class="btn">取消</button>
-            </div>
+            <input class="contact_submit" type="submit" value="送出表單">
         </div>
     </div>
     
@@ -274,5 +313,11 @@
         };
         document.addEventListener('DOMContentLoaded',load);
     </script> -->
+    <script 
+    color="255,255,255"
+    opacity="0.3"
+    z-index="-2"
+    count="300"
+    src="https://cdnjs.cloudflare.com/ajax/libs/canvas-nest.js/2.0.4/canvas-nest.js" integrity="sha512-P+NGabN/TJDOnCVOFJO+E06TBm4i+M8dTT91lWg/8UpwLrzicEXIypmABPpA47D0x6r+yxFHjYIZKWhc1h7xlQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </body>
 </html>

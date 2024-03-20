@@ -5,12 +5,13 @@
   // height: 90vh; //高度先不寫
 
   .member_main {
-    background-color: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(3px);
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(18px);
     // border: 3px solid red;
     padding: 20px;
     width: 80%;
     margin: 0 auto; //這個是只有一個div讓他整個置中到父層的置中寫法
+    box-shadow: 0 0 100px orange;
     .main_top {
       ul {
         display: flex;
@@ -18,14 +19,16 @@
         justify-content: space-around;
         list-style: none;
         padding: 0;
+        cursor: pointer;
         li {
           padding: 20px 50px;
           background: whitesmoke;
           color: black;
           border-radius: 10px;
           &:hover {
-            transform: scale(1.2);
-            background-color: rgb(161, 159, 159);
+            transform: scale(1.1);
+            background-color: rgb(204, 18, 52);
+            color: whitesmoke;
           }
         }
       }
@@ -49,6 +52,7 @@
           h4 {
             padding-left: 25px;
             padding-bottom: 18px;
+            font-size: 20px;
           }
           p {
             margin: 0;
@@ -62,6 +66,9 @@
         }
         .right {
           flex: 1 1 40%;
+          h4 {
+            font-size: 20px;
+          }
         }
       }
     }
@@ -81,6 +88,25 @@
         }
         .bottom_right {
           flex: 1 1 40%;
+          padding-left: 20px;
+          P {
+            font-size: 20px;
+            margin-bottom: 21px;
+          }
+          .member_line {
+            padding: 0px 20px;
+            background-color: rgb(25, 188, 5);
+            &:hover {
+              color: #f2f2f2;
+            }
+          }
+          .member_fb {
+            padding: 0px 20px;
+            background-color: rgb(10, 57, 242);
+            &:hover {
+              color: #f2f2f2;
+            }
+          }
         }
       }
     }
@@ -95,7 +121,7 @@
         td {
           border: 1px solid black;
           padding: 8px;
-          text-align: left;
+          text-align: center;
         }
 
         th {
@@ -104,6 +130,9 @@
 
         tr:nth-child(even) {
           background-color: #f2f2f2;
+        }
+        tr:nth-child(odd) {
+          background-color: white;
         }
       }
     }
@@ -119,7 +148,7 @@
 
     /* Handle */
     ::-webkit-scrollbar-thumb {
-      background:grey;
+      background: grey;
     }
 
     /* Handle on hover */

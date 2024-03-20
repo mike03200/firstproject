@@ -79,6 +79,9 @@ body {
             border-bottom: 2px solid;
           }
         }
+        .header_nav_search {
+          cursor: pointer;
+        }
       }
       .header_nav_low {
         flex-wrap: wrap;
@@ -198,10 +201,10 @@ body {
     div.big_img {
       // border: 2px solid blue;
       background-color: rgba(0, 0, 0, 0.5); //這邊是透明的意思
+      backdrop-filter: blur(5px);
       min-height: 70vh;
       display: flex;
       margin-top: 125px;
-
       // align-items: center;
       .big_img_left {
         // border: 2px solid red;
@@ -279,47 +282,109 @@ body {
           }
         }
       }
-      .big_img_content {
-        // border: 2px solid greenyellow;
-        flex: 0 0 40%;
-        margin-top: 60px;
+      // .big_img_content {
+      //   // border: 2px solid greenyellow;
+      //   flex: 0 0 40%;
+      //   margin-top: 60px;
 
-        .grid-item {
-          display: inline-block;
-          // 可选：设置单元格的样式，如背景色、边框等
-          // border: 1px solid #ccc;
-          position: relative;
-          background: no-repeat;
-          background-size: cover;
-          height: 200px;
-          width: 48%;
-          &:hover {
-            transform: scale(1.1);
-          }
+      //   .grid-item {
+      //     display: inline-block;
+      //     // 可选：设置单元格的样式，如背景色、边框等
+      //     // border: 1px solid #ccc;
+      //     position: relative;
+      //     background: no-repeat;
+      //     background-size: cover;
+      //     height: 200px;
+      //     width: 48%;
+      //     &:hover {
+      //       transform: scale(1.1);
+      //     }
 
-          background-repeat: no-repeat;
-          background-size: contain;
-          &.img-01 {
-            background-image: url("../第一次專題/images/grid_img/g_4.jpeg");
-          }
-          &.img-02 {
-            background-image: url("../第一次專題/images/grid_img/g_2.jpeg");
-          }
-          &.img-03 {
-            background-image: url("../第一次專題/images/grid_img/g_6.jpeg");
-          }
-          &.img-04 {
-            background-image: url("../第一次專題/images/grid_img/grid_3.jpeg");
-          }
+      //     background-repeat: no-repeat;
+      //     background-size: contain;
+      //     &.img-01 {
+      //       background-image: url("../第一次專題/images/grid_img/g_4.jpeg");
+      //     }
+      //     &.img-02 {
+      //       background-image: url("../第一次專題/images/grid_img/g_2.jpeg");
+      //     }
+      //     &.img-03 {
+      //       background-image: url("../第一次專題/images/grid_img/g_6.jpeg");
+      //     }
+      //     &.img-04 {
+      //       background-image: url("../第一次專題/images/grid_img/grid_3.jpeg");
+      //     }
 
-          p {
-            color: red;
-            background-color: rgba(0, 0, 0, 0.5);
-            position: absolute;
-            font-size: 16px;
-            bottom: 0;
-            left: 0;
+      //     p {
+      //       color: red;
+      //       background-color: rgba(0, 0, 0, 0.5);
+      //       position: absolute;
+      //       font-size: 16px;
+      //       bottom: 0;
+      //       left: 0;
+      //     }
+      //   }
+      // }
+      .big_img_right {
+        width: 100%;
+        flex: 1 1 40%;
+        display: flex;
+        cursor: pointer;
+        .big_img_right1,
+        .big_img_right2 {
+          flex: 1 1 50%;
+          min-height: 84px;
+          .img_right1_1 {
+            margin: 20px 10px;
+            display: flex;
+            border: 2px solid black;
+            align-items: center;
+            background: white;
+            box-shadow: 30px;
+            border-radius: 10px;
+            min-height: 84px;
+
+            &:hover {
+              background-color: gold;
+              
+            }
+            .right1_1_content {
+              display: flex;
+              flex: 1 1 80%;
+              flex-wrap: wrap; //這邊我不是想這樣寫的，但沒辦法，先用的
+              .content_child {
+                margin-right: 5px;
+                background-color: red;
+                color: white;
+                font-size: 15px;
+                border-radius: 6px;
+              }
+              .content_new {
+                background-color: orange;
+                color: white;
+                font-size: 15px;
+                border-radius: 3px;
+              }
+              p {
+                color: black;
+                font-size: 14px;
+                line-height: 14px;
+                &:hover {
+                  color: purple;
+                }
+              }
+            }
+            .right1_1_money {
+              flex: 1 1 20%;
+              p {
+                color: red;
+                font-size: 12px;
+              }
+            }
           }
+        }
+        .big_img_right2 {
+          flex: 1 1 50%;
         }
       }
     }
@@ -406,5 +471,6 @@ body {
     font-size: 12px;
   } //因為不知道如何在上面再插入，所以只好寫在最下面
 }
+
 
 // scrolerbar

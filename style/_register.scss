@@ -1,6 +1,48 @@
 .register_main {
   width: 100%;
-  height: 85vh; //我發現如果我在這個scss改了main，那會不會連動改到所有的main
+  padding-top: 100px; //我發現如果我在這個scss改了main，那會不會連動改到所有的main
+ padding-bottom: 200px;
+  // (A) UNIFORM ROW HEIGHT
+  // 确保足够的高度空间
+  .vwrap,
+  .vitem {
+    height: 80px;
+  }
+  .vwrap {
+    overflow: hidden;
+  }
+
+  // (B) CENTER TEXT
+  // 居中文本
+  .vitem {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  // (C) MOVE ITEMS FROM TOP TO BOTTOM
+  // 从顶部向底部移动项目
+  // bottom 0 = 第一个项目, bottom 300% = 第四个项目
+  .vmove {
+    position: relative;
+    bottom: 0;
+  }
+  @keyframes tickerv {
+    0% {
+      bottom: -100%;
+    }
+    100% {
+      bottom: 400%;
+    }
+  }
+  .vmove {
+    animation: tickerv linear 12s infinite;
+  }
+  .vmove:hover {
+    animation-play-state: paused;
+  }
+
   div.filter {
     width: 100%;
     min-height: 50vh;
@@ -34,7 +76,7 @@
     max-width: 100%;
     box-sizing: border-box;
     padding: 25px;
-    margin: 10% auto 0;
+    margin: 20px auto 0;
     position: relative;
     z-index: 1;
     border-top: 5px solid $yellow;

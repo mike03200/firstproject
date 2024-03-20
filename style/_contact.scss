@@ -1,24 +1,64 @@
 .contact_main {
+  padding-top: 100px;
+  padding-bottom: 100px;
   width: 100%;
-  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
   .login {
-    width: 600px;
-    height: 400px;
-    background-color: rgba(0, 0, 0, 0.2);
-    border: 10px solid white;
+    width: 80%;
+    // height: 400px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 50px;
+    border: 2px solid white;
     border-radius: 10px;
-    box-shadow: 0 0 60px black;
-    backdrop-filter: blur(3px);
+    box-shadow: 0 0 100px orange;
+    backdrop-filter: blur(5px);
     display: flex;
     justify-content: center;
     align-items: center;
     .form {
-      border: 10px solid white;
-      width: 400px;
+      // border: 1px solid white;
+      width: 80%;
       color: aliceblue;
+      padding-left: 75px;
+
+      .contact_form_content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .contact_form_content_left {
+          flex: 1 1 50%;
+          margin-top: 10px;
+          .form_group {
+            margin-bottom: 20px;
+            .form_group_label {
+              padding: 2px 5px;
+              // background-color: aqua;
+              color: whitesmoke;
+              sup {
+                color: red;
+              }
+            }
+            .form_group_select {
+              padding: 3px 48px; //超鳥我打得超爛
+            }
+          }
+        }
+        .contact_form_content_right {
+          flex: 1 1 50%;
+        }
+      }
+      .contact_submit {
+        //這邊很怪我不知道是不是要這樣用推的
+        margin-left: 375px;
+        margin-top: 25px;
+        color: black;
+        padding: 0px 60px;
+        &:hover {
+          color: red;
+        }
+      }
     }
   }
 }
